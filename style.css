@@ -39,14 +39,11 @@ body {
 }
 
 .profile-photo {
-  width: 165px;
-  height: 165px;
-
+  width: 120px;
+  height: 120px;
   object-fit: cover;
-
   border-radius: 50%;
-
-  border: 4px solid white;
+  border: 3px solid white;
 }
 
 .hero-text h1 {
@@ -370,8 +367,8 @@ footer p {
   }
 
   .profile-photo {
-    width: 140px;
-    height: 140px;
+    width: 105px;
+    height: 105px;
   }
 
   .hero-text h1 {
