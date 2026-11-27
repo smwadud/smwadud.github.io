@@ -393,3 +393,90 @@ footer p {
     font-size: 24px;
   }
 }
+
+
+/* ADDED: hero location */
+
+.hero-text .hero-location {
+  color: #d0d7de;
+  font-size: 15px;
+}
+
+
+/* ADDED: career timeline */
+
+.timeline-title {
+  margin-top: 40px;
+}
+
+.timeline {
+  border-left: 3px solid #0969da;
+  padding-left: 24px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #0969da;
+  border: 2px solid white;
+}
+
+.timeline-item h4 {
+  margin: 4px 0 2px;
+  font-size: 18px;
+}
+
+.timeline-item p {
+  margin: 4px 0;
+}
+
+.timeline-date,
+.pub-meta {
+  font-size: 13px;
+  font-weight: 600;
+  color: #0969da;
+}
+
+.timeline-org {
+  color: #57606a;
+  font-weight: 600;
+}
+
+
+/* ADDED: research */
+
+.research-meta {
+  color: #57606a;
+  font-size: 14px;
+}
+
+.pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.pipeline span {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #0969da;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0969da;
+}
+
+.pipeline span:not(:last-child)::after {
+  content: " →";
+}
