@@ -37,12 +37,14 @@
       <div class="hero-buttons">
         <a href="https://github.com/smwadud"
            target="_blank"
+         rel="noopener noreferrer"
            class="button">
           GitHub
         </a>
 
         <a href="https://www.linkedin.com/in/smwadud/"
            target="_blank"
+         rel="noopener noreferrer"
            class="button">
           LinkedIn
         </a>
@@ -162,6 +164,18 @@
   <div class="timeline">
 
     <div class="timeline-item">
+      <span class="timeline-date">May 2026 – Present</span>
+      <h4>IT Support Specialist (Casual)</h4>
+      <p class="timeline-org">EIL Global, Hamilton and Waikato, New Zealand</p>
+      <p>
+        Provide onsite IT support for retail and business clients, including
+        Windows 11 migrations, POS/EFTPOS systems and hardware or software
+        troubleshooting. Resolve network-access issues with remote engineers
+        and vendors, and document each assignment.
+      </p>
+    </div>
+
+    <div class="timeline-item">
       <span class="timeline-date">Jan 2024 – Feb 2026</span>
       <h4>Assistant Vice President &amp; Manager – Network &amp; Cyber Security</h4>
       <p class="timeline-org">Global Islami Bank PLC, Dhaka, Bangladesh</p>
@@ -236,33 +250,40 @@
 
     <p class="research-meta">
       Master's dissertation · University of Waikato ·
-      Supervisor: Dr. Vimal Kumar · Completion: January 2027
+      Supervisor: Dr. Vimal Kumar · Expected completion: January 2027
     </p>
 
     <p>
       My Master's research maps and analyses the Internet-facing attack
-      surface of Bangladesh's public infrastructure using passive OSINT
-      techniques only. No active scanning is done.
+      surface of Bangladesh's public infrastructure using predominantly
+      passive public-source discovery, controlled DNS validation and
+      Censys service observations. The scope includes government domains,
+      Bangladesh Bank-listed financial institutions and international or
+      foreign-parent sites.
     </p>
 
     <p>
       The research involves asset and service discovery,
       software identification, CPE mapping,
-      vulnerability analysis using CVE and CVSS,
-      and exploitation likelihood assessment using EPSS.
+      potential vulnerability associations using CVE and CVSS,
+      and descriptive threat context using EPSS and CISA KEV.
     </p>
 
-    <div class="pipeline">
-      <span>Passive discovery</span>
-      <span>Service &amp; software ID</span>
-      <span>CPE mapping</span>
-      <span>CVE / CVSS</span>
-      <span>EPSS prioritisation</span>
+    <div class="pipeline" aria-label="Research workflow in order">
+      <span>Public-source discovery</span>
+      <span>DNS validation / ASN / BGP</span>
+      <span>Censys services &amp; software</span>
+      <span>CPE evidence review</span>
+      <span>NVD CVE / CVSS</span>
+      <span>EPSS / CISA KEV context</span>
     </div>
 
     <p>
       The objective is to better understand exposed infrastructure,
-      service diversity and vulnerability risk at scale.
+      service diversity and potential vulnerability exposure at scale.
+      Software-to-CVE matches require further validation before a
+      vulnerability can be confirmed. EPSS and CISA KEV add descriptive
+      vulnerability-intelligence context.
     </p>
 
   </div>
@@ -319,6 +340,7 @@
       <span>CVE</span>
       <span>CVSS</span>
       <span>EPSS</span>
+      <span>CISA KEV</span>
     </div>
 
   </div>
@@ -379,13 +401,15 @@
       <h3>🐍 Python for Cybersecurity</h3>
 
       <p>
-        Python scripts and experiments related to
-        cybersecurity automation and security data analysis.
+        Python processing and PowerShell orchestration for asset discovery,
+        DNS results and vulnerability-intelligence joins. Outputs include
+        structured CSV/JSON files, execution logs and SHA-256 hashes.
       </p>
 
       <a href="https://github.com/smwadud"
-         target="_blank">
-        View on GitHub →
+         target="_blank"
+         rel="noopener noreferrer">
+        GitHub profile →
       </a>
 
     </div>
@@ -396,9 +420,12 @@
       <h3>🌐 Attack Surface Mapping</h3>
 
       <p>
-        Research and technical work involving passive discovery
-        and analysis of Internet-facing infrastructure.
+        Public-source and Subfinder discovery, wildcard-aware DNS
+        validation and hostname-to-IP mapping. ASN/BGP context and Censys
+        observations connect discovered assets with networks and services.
       </p>
+
+      <a href="#research">View research method</a>
 
     </div>
 
@@ -408,9 +435,12 @@
       <h3>🛡️ Vulnerability Analysis</h3>
 
       <p>
-        Analysis and prioritisation of vulnerabilities using
-        CPE, CVE, CVSS and EPSS.
+        Review observed software and version evidence before linking
+        CPE identifiers to NVD CVEs. Describe potential matches using
+        CVSS, EPSS and CISA KEV, with uncertain evidence kept separate.
       </p>
+
+      <a href="#research">View research context</a>
 
     </div>
 
@@ -428,24 +458,6 @@
 
     <div class="card project-card">
 
-      <span class="pub-meta">Prothom Alo English · October 2026</span>
-
-      <h3>Bangladesh's cyber security challenge: Do we know what is exposed?</h3>
-
-      <p>
-        Why organisations need to know what they have exposed to the
-        Internet, not only which firewalls and policies they have.
-      </p>
-
-      <a href="https://en.prothomalo.com/opinion/op-ed/2yolgog0kp"
-         target="_blank">
-        Read on Prothom Alo →
-      </a>
-
-    </div>
-
-    <div class="card project-card">
-
       <span class="pub-meta">The Daily Star · 19 November 2026</span>
 
       <h3>The growing threat of cyberattacks: are organisations ready to go beyond prevention?</h3>
@@ -456,8 +468,28 @@
       </p>
 
       <a href="https://www.thedailystar.net/news/technology/news/the-growing-threat-cyberattacks-are-organisations-ready-go-beyond-prevention-4328231"
-         target="_blank">
+         target="_blank"
+         rel="noopener noreferrer">
         Read on The Daily Star →
+      </a>
+
+    </div>
+
+    <div class="card project-card">
+
+      <span class="pub-meta">Prothom Alo English · 26 October 2026</span>
+
+      <h3>Bangladesh's cyber security challenge: Do we know what is exposed?</h3>
+
+      <p>
+        Why organisations need to know what they have exposed to the
+        Internet, not only which firewalls and policies they have.
+      </p>
+
+      <a href="https://en.prothomalo.com/opinion/op-ed/2yolgog0kp"
+         target="_blank"
+         rel="noopener noreferrer">
+        Read on Prothom Alo →
       </a>
 
     </div>
@@ -475,7 +507,8 @@
       </p>
 
       <a href="https://en.prothomalo.com/opinion/op-ed/vjas26ic6k"
-         target="_blank">
+         target="_blank"
+         rel="noopener noreferrer">
         Read on Prothom Alo →
       </a>
 
@@ -502,17 +535,20 @@
     </a>
 
     <a href="https://github.com/smwadud"
-       target="_blank">
+       target="_blank"
+         rel="noopener noreferrer">
       GitHub
     </a>
 
     <a href="https://www.linkedin.com/in/smwadud/"
-       target="_blank">
+       target="_blank"
+         rel="noopener noreferrer">
       LinkedIn
     </a>
 
     <a href="https://www.youtube.com/@BeatTheBug"
-       target="_blank">
+       target="_blank"
+         rel="noopener noreferrer">
       YouTube: Beat The Bug
     </a>
 

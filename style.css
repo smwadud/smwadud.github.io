@@ -178,7 +178,7 @@ h2 {
   display: grid;
 
   grid-template-columns:
-    repeat(auto-fit, minmax(250px, 1fr));
+    repeat(auto-fit, minmax(min(250px, 100%), 1fr));
 
   gap: 20px;
 }
@@ -382,7 +382,7 @@ footer p {
   nav a {
     padding: 11px 7px;
 
-    font-size: 13px;
+    font-size: 14px;
   }
 
   section {
@@ -442,7 +442,7 @@ footer p {
 
 .timeline-date,
 .pub-meta {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   color: #0969da;
 }
@@ -479,4 +479,60 @@ footer p {
 
 .pipeline span:not(:last-child)::after {
   content: " →";
+}
+
+/* Navigation offsets, keyboard focus and narrow-screen support */
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.cert small {
+  display: block;
+  font-size: 14px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+a:focus-visible {
+  outline: 3px solid #0969da;
+  outline-offset: 4px;
+}
+
+.hero a:focus-visible,
+.contact-links a:focus-visible {
+  outline-color: #58a6ff;
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
 }
