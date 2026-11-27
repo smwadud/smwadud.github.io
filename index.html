@@ -9,7 +9,686 @@
   <meta name="description"
         content="S M Abdul Wadud - Network and cyber security professional with nearly 20 years in enterprise banking networks. Master of Cyber Security student at the University of Waikato, Hamilton, New Zealand.">
 
-  <link rel="stylesheet" href="style.css">
+  <style>
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, Helvetica, Arial, sans-serif;
+
+  background: #ffffff;
+  color: #24292f;
+
+  line-height: 1.7;
+}
+
+.container {
+  width: 90%;
+  max-width: 1050px;
+  margin: auto;
+}
+
+
+/* HERO */
+
+.hero {
+  background: #0d1117;
+  color: white;
+  padding: 55px 20px;
+}
+
+.hero-content {
+  display: flex;
+  align-items: center;
+  gap: 35px;
+}
+
+.profile-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+
+.hero-text h1 {
+  margin: 0;
+
+  font-size: 44px;
+
+  letter-spacing: .3px;
+}
+
+.hero-text h3 {
+  margin: 8px 0 4px;
+
+  font-size: 21px;
+
+  font-weight: 500;
+
+  color: #d0d7de;
+}
+
+.hero-text p {
+  margin-top: 6px;
+
+  color: #8c959f;
+}
+
+
+/* BUTTONS */
+
+.hero-buttons {
+  margin-top: 22px;
+}
+
+.button {
+  display: inline-block;
+
+  margin-right: 10px;
+  margin-bottom: 8px;
+
+  padding: 9px 18px;
+
+  border: 1px solid #8c959f;
+
+  border-radius: 6px;
+
+  color: white;
+
+  text-decoration: none;
+
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: white;
+  color: #0d1117;
+}
+
+
+/* NAV */
+
+nav {
+  background: white;
+
+  border-bottom: 1px solid #d8dee4;
+
+  position: sticky;
+
+  top: 0;
+
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+}
+
+nav a {
+  padding: 16px 14px;
+
+  text-decoration: none;
+
+  color: #24292f;
+
+  font-weight: 600;
+
+  font-size: 15px;
+}
+
+nav a:hover {
+  background: #f6f8fa;
+}
+
+
+/* SECTIONS */
+
+section {
+  padding: 52px 0;
+
+  border-bottom: 1px solid #eaeef2;
+}
+
+section p {
+  max-width: 900px;
+}
+
+h2 {
+  font-size: 29px;
+
+  margin-top: 0;
+
+  margin-bottom: 25px;
+
+  padding-left: 14px;
+
+  border-left: 5px solid #24292f;
+}
+
+.section-intro {
+  margin-bottom: 28px;
+}
+
+
+/* CARDS */
+
+.cards {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+
+  gap: 20px;
+}
+
+.card {
+  background: #ffffff;
+
+  border: 1px solid #d8dee4;
+
+  border-radius: 9px;
+
+  padding: 24px;
+
+  transition: 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 5px 15px rgba(27,31,36,.10);
+}
+
+.card h3 {
+  margin-top: 5px;
+
+  margin-bottom: 8px;
+}
+
+.card-icon {
+  font-size: 28px;
+}
+
+
+/* RESEARCH */
+
+.research-box {
+  padding: 25px;
+
+  background: #f6f8fa;
+
+  border-left: 4px solid #0969da;
+
+  border-radius: 6px;
+}
+
+.research-box h3 {
+  margin-top: 0;
+}
+
+
+/* SKILLS */
+
+.skill-group {
+  margin-bottom: 28px;
+}
+
+.skill-group h3 {
+  font-size: 17px;
+
+  margin-bottom: 12px;
+}
+
+.badges {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 9px;
+}
+
+.badges span {
+  padding: 7px 13px;
+
+  background: #0969da;
+
+  color: white;
+
+  border-radius: 5px;
+
+  font-size: 14px;
+
+  font-weight: 600;
+}
+
+
+/* CERTIFICATIONS */
+
+.cert-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 15px;
+}
+
+.cert {
+  padding: 18px;
+
+  border: 1px solid #d8dee4;
+
+  border-radius: 8px;
+
+  background: #f6f8fa;
+}
+
+.cert strong {
+  display: block;
+
+  font-size: 17px;
+}
+
+.cert small {
+  color: #57606a;
+}
+
+
+/* PROJECTS */
+
+.project-card a {
+  text-decoration: none;
+
+  color: #0969da;
+
+  font-weight: 600;
+}
+
+
+/* CONTACT */
+
+.contact-links {
+  display: flex;
+
+  gap: 12px;
+
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  padding: 10px 20px;
+
+  background: #24292f;
+
+  color: white;
+
+  border-radius: 6px;
+
+  text-decoration: none;
+
+  font-weight: 600;
+}
+
+
+/* FOOTER */
+
+footer {
+  text-align: center;
+
+  background: #0d1117;
+
+  color: #d0d7de;
+
+  padding: 28px 20px;
+}
+
+footer p {
+  margin: 3px;
+}
+
+.footer-small {
+  color: #8c959f;
+
+  font-size: 13px;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 700px) {
+
+  .hero-content {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .profile-photo {
+    width: 105px;
+    height: 105px;
+  }
+
+  .hero-text h1 {
+    font-size: 34px;
+  }
+
+  .hero-text h3 {
+    font-size: 18px;
+  }
+
+  nav a {
+    padding: 11px 7px;
+
+    font-size: 14px;
+  }
+
+  section {
+    padding: 38px 0;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+}
+
+
+/* ADDED: hero location */
+
+.hero-text .hero-location {
+  color: #d0d7de;
+  font-size: 15px;
+}
+
+
+/* ADDED: career timeline */
+
+.timeline-title {
+  margin-top: 40px;
+}
+
+.timeline {
+  border-left: 3px solid #0969da;
+  padding-left: 24px;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -32px;
+  top: 6px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: #0969da;
+  border: 2px solid white;
+}
+
+.timeline-item h4 {
+  margin: 4px 0 2px;
+  font-size: 18px;
+}
+
+.timeline-item p {
+  margin: 4px 0;
+}
+
+.timeline-date,
+.pub-meta {
+  font-size: 14px;
+  font-weight: 600;
+  color: #0969da;
+}
+
+.timeline-org {
+  color: #57606a;
+  font-weight: 600;
+}
+
+
+/* ADDED: research */
+
+.research-meta {
+  color: #57606a;
+  font-size: 14px;
+}
+
+.pipeline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 18px;
+}
+
+.pipeline span {
+  padding: 6px 12px;
+  background: white;
+  border: 1px solid #0969da;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0969da;
+}
+
+.pipeline span:not(:last-child)::after {
+  content: " →";
+}
+
+/* Navigation offsets, keyboard focus and narrow-screen support */
+
+html {
+  scroll-padding-top: 6rem;
+}
+
+.profile-photo {
+  flex-shrink: 0;
+}
+
+.cert small {
+  display: block;
+  font-size: 14px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card a {
+  align-self: flex-start;
+  margin-top: auto;
+}
+
+a:focus-visible {
+  outline: 3px solid #0969da;
+  outline-offset: 4px;
+}
+
+.hero a:focus-visible,
+.contact-links a:focus-visible {
+  outline-color: #58a6ff;
+}
+
+@media (max-width: 700px) {
+  html {
+    scroll-padding-top: 10rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button,
+  .card {
+    transition: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+}
+
+/* Career history: one card per employer */
+.timeline-title {
+  margin: 38px 0 20px;
+  font-size: 23px;
+}
+.timeline {
+  display: grid;
+  gap: 20px;
+  border: 0;
+  padding: 0;
+}
+.timeline-item {
+  margin: 0;
+  padding: 25px 28px;
+  border: 1px solid #d8dee4;
+  border-left: 4px solid #0969da;
+  border-radius: 8px;
+  background: #fff;
+  min-width: 0;
+}
+.timeline-item::before {
+  display: none;
+}
+.career-heading {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px 24px;
+}
+.timeline-item .career-heading h4 {
+  margin: 0 0 3px;
+  font-size: 20px;
+  line-height: 1.4;
+}
+.timeline-item .career-location {
+  margin: 0;
+  color: #57606a;
+  font-size: 14px;
+}
+.timeline-item .timeline-date {
+  display: inline-block;
+  flex-shrink: 0;
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #ddf4ff;
+  color: #0757a6;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.6;
+}
+.timeline-item .career-role {
+  margin: 18px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+  font-weight: 650;
+  color: #24292f;
+}
+.employment-type {
+  display: inline-block;
+  margin-left: 5px;
+  padding: 1px 7px;
+  border: 1px solid #d8dee4;
+  border-radius: 4px;
+  color: #57606a;
+  font-size: 14px;
+  font-weight: 500;
+  vertical-align: 1px;
+}
+.timeline-item .career-role-date {
+  margin: 4px 0 0;
+  color: #57606a;
+  font-size: 14px;
+}
+.career-points {
+  margin: 12px 0 0;
+  padding-left: 20px;
+}
+.career-points li {
+  margin: 7px 0 0;
+  line-height: 1.65;
+}
+.career-progression {
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid #eaeef2;
+}
+.career-progression h5 {
+  margin: 0 0 10px;
+  font-size: 14px;
+  color: #57606a;
+  font-weight: 650;
+}
+.career-progression ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.career-progression li {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 4px 20px;
+  padding: 8px 0;
+  font-size: 14px;
+  line-height: 1.6;
+}
+.career-progression li + li {
+  border-top: 1px solid #f0f3f6;
+}
+.progression-date {
+  color: #57606a;
+}
+@media (max-width: 700px) {
+  .timeline-item {
+    padding: 20px;
+  }
+  .career-heading {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .timeline-item .career-heading h4 {
+    font-size: 19px;
+  }
+  .timeline-item .career-role {
+    font-size: 16px;
+    margin-top: 15px;
+  }
+  .career-progression li {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Research paragraph alignment */
+.research-box p {
+  max-width: none;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+  </style>
 </head>
 
 <body>
@@ -159,52 +838,63 @@
 
   </div>
 
-  <h3 class="timeline-title">Career Timeline</h3>
+  <h3 class="timeline-title">Career History</h3>
 
   <div class="timeline">
 
-    <div class="timeline-item">
-      <span class="timeline-date">May 2026 – Present</span>
-      <h4>IT Support Specialist (Casual)</h4>
-      <p class="timeline-org">EIL Global, Hamilton and Waikato, New Zealand</p>
-      <p>
-        Provide onsite IT support for retail and business clients, including
-        Windows 11 migrations, POS/EFTPOS systems and hardware or software
-        troubleshooting. Resolve network-access issues with remote engineers
-        and vendors, and document each assignment.
-      </p>
-    </div>
+    <article class="timeline-item">
+      <div class="career-heading">
+        <div>
+          <h4>EIL Global</h4>
+          <p class="career-location">Hamilton &amp; Waikato, New Zealand</p>
+        </div>
+        <span class="timeline-date">May 2026 – Present</span>
+      </div>
+      <p class="career-role">IT Support Specialist <span class="employment-type">Casual</span></p>
+      <ul class="career-points">
+        <li>Onsite IT support for retail and business clients: Windows 11 migrations, POS/EFTPOS systems and hardware or software faults.</li>
+        <li>Network-access troubleshooting, coordination with remote engineers and vendors, and clear service documentation.</li>
+      </ul>
+    </article>
 
-    <div class="timeline-item">
-      <span class="timeline-date">Jan 2024 – Feb 2026</span>
-      <h4>Assistant Vice President &amp; Manager – Network &amp; Cyber Security</h4>
-      <p class="timeline-org">Global Islami Bank PLC, Dhaka, Bangladesh</p>
-      <p>
-        Led network and cyber security for a bank network of 250+ branches
-        and sub-branches, including firewalls, VPN, WAF, DDoS protection,
-        security monitoring and vulnerability assessment.
-      </p>
-    </div>
+    <article class="timeline-item">
+      <div class="career-heading">
+        <div>
+          <h4>Global Islami Bank PLC</h4>
+          <p class="career-location">Dhaka, Bangladesh</p>
+        </div>
+        <span class="timeline-date">Oct 2013 – Feb 2026</span>
+      </div>
+      <p class="career-role">Assistant Vice President &amp; Manager<br>Network &amp; Cyber Security</p>
+      <p class="career-role-date">Jan 2024 – Feb 2026</p>
+      <ul class="career-points">
+        <li>Led network and security operations supporting <strong>250+ branches and sub-branches</strong>, data centres and disaster-recovery connectivity.</li>
+        <li>Managed enterprise networking, firewalls, VPN, WAF, DDoS protection, security monitoring and vulnerability assessment.</li>
+      </ul>
+      <div class="career-progression">
+        <h5>Earlier roles at Global Islami Bank</h5>
+        <ul>
+          <li><span>First Assistant Vice President &amp; Senior Network Administrator</span><span class="progression-date">Jun 2018 – Dec 2023</span></li>
+          <li><span>Senior Principal Officer &amp; Network Administrator</span><span class="progression-date">Oct 2015 – Jun 2018</span></li>
+          <li><span>Principal Officer &amp; Network Administrator</span><span class="progression-date">Oct 2013 – Oct 2015</span></li>
+        </ul>
+      </div>
+    </article>
 
-    <div class="timeline-item">
-      <span class="timeline-date">Oct 2013 – Dec 2023</span>
-      <h4>Network Administrator → First Assistant Vice President &amp; Senior Network Administrator</h4>
-      <p class="timeline-org">Global Islami Bank PLC, Dhaka, Bangladesh</p>
-      <p>
-        Built and ran the bank's enterprise network, data centre and
-        disaster recovery connectivity as the bank grew to 250+ branches.
-      </p>
-    </div>
-
-    <div class="timeline-item">
-      <span class="timeline-date">Jul 2006 – Oct 2013</span>
-      <h4>Executive Officer &amp; Assistant Network Administrator</h4>
-      <p class="timeline-org">Export Import Bank of Bangladesh (EXIM Bank)</p>
-      <p>
-        Started as a Trainee Officer and grew into network administration.
-        Received the EXIM Bank Gold Medal for performance.
-      </p>
-    </div>
+    <article class="timeline-item">
+      <div class="career-heading">
+        <div>
+          <h4>Export Import Bank of Bangladesh</h4>
+          <p class="career-location">EXIM Bank · Dhaka, Bangladesh</p>
+        </div>
+        <span class="timeline-date">Jul 2006 – Oct 2013</span>
+      </div>
+      <p class="career-role">Executive Officer &amp; Assistant Network Administrator</p>
+      <ul class="career-points">
+        <li>Progressed from Trainee Officer through network support roles to Executive Officer &amp; Assistant Network Administrator.</li>
+        <li>Supported branch networking and connectivity. Received the Managing Director's Gold Medal for Best Officer in 2010.</li>
+      </ul>
+    </article>
 
   </div>
 
